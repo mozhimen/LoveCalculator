@@ -29,35 +29,20 @@ class MainViewModel @Inject constructor(private val _cache: Cache) : BaseViewMod
     val lv_number_gege = MutableLiveData(_cache.number_gege.toString())
     val lv_number_meimei = MutableLiveData(_cache.number_meimei.toString())
 
-    fun add1_gege() {
-        number_gege = number_gege.toBigDecimal().add(BigDecimal(1)).toDouble()
+    fun add_gege(other: Double) {
+        number_gege = number_gege.toBigDecimal().add(BigDecimal(other)).toDouble()
     }
 
-    fun add01_gege() {
-        number_gege = number_gege.toBigDecimal().add(BigDecimal(0.1)).toDouble()
+    fun minus_gege(other: Double) {
+        number_gege = number_gege.toBigDecimal().minus(BigDecimal(other)).toDouble()
     }
 
-    fun minus1_gege() {
-        number_gege = number_gege.toBigDecimal().minus(BigDecimal(1)).toDouble()
+    fun add_meimei(other: Double) {
+        number_meimei = number_meimei.toBigDecimal().add(BigDecimal(other)).toDouble()
     }
 
-    fun minus01_gege() {
-        number_gege = number_gege.toBigDecimal().minus(BigDecimal(0.1)).toDouble()
+    fun minus_meimei(other: Double) {
+        number_meimei = number_meimei.toBigDecimal().minus(BigDecimal(other)).toDouble()
     }
 
-    fun add1_meimei() {
-        number_meimei = number_meimei.toBigDecimal().add(BigDecimal(1)).toDouble()
-    }
-
-    fun add01_meimei() {
-        number_meimei = number_meimei.toBigDecimal().add(BigDecimal(0.1)).toDouble()
-    }
-
-    fun minus1_meimei() {
-        number_meimei = number_meimei.toBigDecimal().minus(BigDecimal(1)).toDouble()
-    }
-
-    fun minus01_meimei() {
-        number_meimei = number_meimei.toBigDecimal().minus(BigDecimal(0.1)).toDouble()
-    }
 }
