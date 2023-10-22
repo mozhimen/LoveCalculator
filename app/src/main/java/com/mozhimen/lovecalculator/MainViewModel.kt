@@ -45,4 +45,5 @@ class MainViewModel @Inject constructor(private val _cache: Cache) : BaseViewMod
         number_meimei = number_meimei.toBigDecimal().minus(BigDecimal(other)).toDouble()
     }
 
+
 }

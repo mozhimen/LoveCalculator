@@ -16,9 +16,15 @@
         tools:context=".MainActivity">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/main_btn_record"
+            style="@style/LvTxt_Style"
+            android:text="记录"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="@dimen/margin_10"/>
+        <TextView
             android:text="@string/str_title"
+            style="@style/LvTxt_Style"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -40,133 +46,170 @@
             app:layout_constraintGuide_percent="0.5" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/main_name_boy"
+            style="@style/LvTxt_Style"
             android:text="哥哥"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/main_num_boy"
             app:layout_constraintEnd_toEndOf="@id/guideline_v1"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.3" />
+            app:layout_constraintVertical_chainStyle="packed"
+            android:layout_marginBottom="@dimen/margin_10"
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="妹妹"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@id/guideline_v1"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.3" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/main_num_boy"
+            style="@style/LvTxt_Style"
             tools:text="0.0"
             android:text="@{vm.lv_number_gege}"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/guideline_h1"
             app:layout_constraintEnd_toEndOf="@id/guideline_v1"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.4" />
+            app:layout_constraintTop_toBottomOf="@id/main_name_boy"/>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/main_name_girl"
+            style="@style/LvTxt_Style"
+            android:text="妹妹"
+            app:layout_constraintBottom_toTopOf="@id/main_num_girl"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="@dimen/margin_10"
+            app:layout_constraintStart_toStartOf="@id/guideline_v1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/main_num_girl"
+            style="@style/LvTxt_Style"
             tools:text="0.0"
             android:text="@{vm.lv_number_meimei}"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/guideline_h1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/guideline_v1"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.4" />
+            app:layout_constraintTop_toBottomOf="@id/main_name_girl"/>
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/main_btn_boy_add01"
+            style="@style/LvBtn_style"
             android:text="加 0.1"
             android:onClick="@{()->vm.add_gege(0.1)}"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/main_btn_boy_minus01"
             app:layout_constraintEnd_toEndOf="@id/guideline_v1"
+            app:layout_constraintVertical_chainStyle="packed"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/guideline_h1"
-            app:layout_constraintVertical_bias="0.1" />
+            app:layout_constraintTop_toTopOf="@id/guideline_h1"/>
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/main_btn_boy_minus01"
+            style="@style/LvBtn_style"
             android:text="减 0.1"
             android:onClick="@{()->vm.minus_gege(0.1)}"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/main_btn_boy_add05"
             app:layout_constraintEnd_toEndOf="@id/guideline_v1"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/guideline_h1"
-            app:layout_constraintVertical_bias="0.3" />
+            app:layout_constraintTop_toBottomOf="@id/main_btn_boy_add01"/>
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/main_btn_boy_add05"
+            style="@style/LvBtn_style"
+            android:text="加 0.5"
+            android:onClick="@{()->vm.add_gege(0.5)}"
+            app:layout_constraintBottom_toTopOf="@id/main_btn_boy_minus05"
+            app:layout_constraintEnd_toEndOf="@id/guideline_v1"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/main_btn_boy_minus01"/>
+
+        <Button
+            android:id="@+id/main_btn_boy_minus05"
+            style="@style/LvBtn_style"
+            android:text="减 0.5"
+            android:onClick="@{()->vm.minus_gege(0.5)}"
+            app:layout_constraintBottom_toTopOf="@id/main_btn_boy_add1"
+            app:layout_constraintEnd_toEndOf="@id/guideline_v1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/main_btn_boy_add05"/>
+
+        <Button
+            android:id="@+id/main_btn_boy_add1"
+            style="@style/LvBtn_style"
             android:text="加 1"
             android:onClick="@{()->vm.add_gege(1)}"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/main_btn_boy_minus1"
             app:layout_constraintEnd_toEndOf="@id/guideline_v1"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/guideline_h1"
-            app:layout_constraintVertical_bias="0.5" />
+            app:layout_constraintTop_toBottomOf="@id/main_btn_boy_minus05"/>
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/main_btn_boy_minus1"
+            style="@style/LvBtn_style"
             android:text="减 1"
             android:onClick="@{()->vm.minus_gege(1)}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@id/guideline_v1"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/guideline_h1"
-            app:layout_constraintVertical_bias="0.7" />
+            app:layout_constraintTop_toBottomOf="@id/main_btn_boy_add1"/>
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/main_btn_girl_add01"
+            style="@style/LvBtn_style"
             android:text="加 0.1"
             android:onClick="@{()->vm.add_meimei(0.1)}"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/main_btn_girl_minus01"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
             app:layout_constraintStart_toStartOf="@id/guideline_v1"
-            app:layout_constraintTop_toTopOf="@id/guideline_h1"
-            app:layout_constraintVertical_bias="0.1" />
+            app:layout_constraintTop_toTopOf="@id/guideline_h1"/>
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/main_btn_girl_minus01"
+            style="@style/LvBtn_style"
             android:text="减 0.1"
             android:onClick="@{()->vm.minus_meimei(0.1)}"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/main_btn_girl_add05"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/guideline_v1"
-            app:layout_constraintTop_toTopOf="@id/guideline_h1"
-            app:layout_constraintVertical_bias="0.3" />
+            app:layout_constraintTop_toBottomOf="@id/main_btn_girl_add01"/>
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/main_btn_girl_add05"
+            style="@style/LvBtn_style"
+            android:text="加 0.5"
+            android:onClick="@{()->vm.add_meimei(0.5)}"
+            app:layout_constraintBottom_toTopOf="@id/main_btn_girl_minus05"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@id/guideline_v1"
+            app:layout_constraintTop_toBottomOf="@id/main_btn_girl_minus01"/>
+
+        <Button
+            android:id="@+id/main_btn_girl_minus05"
+            style="@style/LvBtn_style"
+            android:text="减 0.5"
+            android:onClick="@{()->vm.minus_meimei(0.5)}"
+            app:layout_constraintBottom_toTopOf="@id/main_btn_girl_add1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guideline_v1"
+            app:layout_constraintTop_toBottomOf="@id/main_btn_girl_add05"/>
+
+        <Button
+            android:id="@+id/main_btn_girl_add1"
+            style="@style/LvBtn_style"
             android:text="加 1"
             android:onClick="@{()->vm.add_meimei(1)}"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/main_btn_girl_minus1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/guideline_v1"
-            app:layout_constraintTop_toTopOf="@id/guideline_h1"
-            app:layout_constraintVertical_bias="0.5" />
+            app:layout_constraintTop_toBottomOf="@id/main_btn_girl_minus05"/>
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/main_btn_girl_minus1"
+            style="@style/LvBtn_style"
             android:text="减 1"
             android:onClick="@{()->vm.minus_meimei(1)}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/guideline_v1"
-            app:layout_constraintTop_toTopOf="@id/guideline_h1"
+            app:layout_constraintTop_toBottomOf="@id/main_btn_girl_add1"
             app:layout_constraintVertical_bias="0.7" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="LvTxt_Style" parent="Txt_Style.Font_Ali_Puhuit.Gravity_Center.Style_Norm.Color_Gray_999.Size_014.Width_Wrap.Height_Wrap"/>
+
+    <style name="LvBtn_style" parent="Btn_Style.Ellip_End.StateL_Anim_Null.PH_10.Width_War.Height_040">
+        <item name="android:fontFamily">@font/alibaba_puhuiti_regular</item>
+    </style>
+</resources>

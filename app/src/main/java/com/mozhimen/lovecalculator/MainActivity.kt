@@ -9,6 +9,9 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class MainActivity : BaseActivityVBVM<ActivityMainBinding, MainViewModel>() {
 
+    override fun initView(savedInstanceState: Bundle?) {
+
+    }
     override fun bindViewVM(vb: ActivityMainBinding) {
         vb.vm = vm
     }
