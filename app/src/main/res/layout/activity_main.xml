@@ -18,13 +18,14 @@
         <TextView
             android:id="@+id/main_btn_record"
             style="@style/LvTxt_Style"
+            android:layout_margin="@dimen/margin_10"
             android:text="记录"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_margin="@dimen/margin_10"/>
+            app:layout_constraintTop_toTopOf="parent" />
+        
         <TextView
-            android:text="@string/str_title"
             style="@style/LvTxt_Style"
+            android:text="@string/str_title"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -48,164 +49,164 @@
         <TextView
             android:id="@+id/main_name_boy"
             style="@style/LvTxt_Style"
+            android:layout_marginBottom="@dimen/margin_10"
             android:text="哥哥"
             app:layout_constraintBottom_toTopOf="@id/main_num_boy"
             app:layout_constraintEnd_toEndOf="@id/guideline_v1"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintVertical_chainStyle="packed"
-            android:layout_marginBottom="@dimen/margin_10"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
 
         <TextView
             android:id="@+id/main_num_boy"
             style="@style/LvTxt_Style"
-            tools:text="0.0"
             android:text="@{vm.lv_number_gege}"
             app:layout_constraintBottom_toBottomOf="@id/guideline_h1"
             app:layout_constraintEnd_toEndOf="@id/guideline_v1"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/main_name_boy"/>
+            app:layout_constraintTop_toBottomOf="@id/main_name_boy"
+            tools:text="0.0" />
 
         <TextView
             android:id="@+id/main_name_girl"
             style="@style/LvTxt_Style"
+            android:layout_marginBottom="@dimen/margin_10"
             android:text="妹妹"
             app:layout_constraintBottom_toTopOf="@id/main_num_girl"
-            app:layout_constraintVertical_chainStyle="packed"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginBottom="@dimen/margin_10"
             app:layout_constraintStart_toStartOf="@id/guideline_v1"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
 
         <TextView
             android:id="@+id/main_num_girl"
             style="@style/LvTxt_Style"
-            tools:text="0.0"
             android:text="@{vm.lv_number_meimei}"
             app:layout_constraintBottom_toBottomOf="@id/guideline_h1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/guideline_v1"
-            app:layout_constraintTop_toBottomOf="@id/main_name_girl"/>
+            app:layout_constraintTop_toBottomOf="@id/main_name_girl"
+            tools:text="0.0" />
 
         <Button
             android:id="@+id/main_btn_boy_add01"
             style="@style/LvBtn_style"
-            android:text="加 0.1"
             android:onClick="@{()->vm.add_gege(0.1)}"
+            android:text="加 0.1"
             app:layout_constraintBottom_toTopOf="@id/main_btn_boy_minus01"
             app:layout_constraintEnd_toEndOf="@id/guideline_v1"
-            app:layout_constraintVertical_chainStyle="packed"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/guideline_h1"/>
+            app:layout_constraintTop_toTopOf="@id/guideline_h1"
+            app:layout_constraintVertical_chainStyle="packed" />
 
         <Button
             android:id="@+id/main_btn_boy_minus01"
             style="@style/LvBtn_style"
-            android:text="减 0.1"
             android:onClick="@{()->vm.minus_gege(0.1)}"
+            android:text="减 0.1"
             app:layout_constraintBottom_toTopOf="@id/main_btn_boy_add05"
             app:layout_constraintEnd_toEndOf="@id/guideline_v1"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/main_btn_boy_add01"/>
+            app:layout_constraintTop_toBottomOf="@id/main_btn_boy_add01" />
 
         <Button
             android:id="@+id/main_btn_boy_add05"
             style="@style/LvBtn_style"
-            android:text="加 0.5"
             android:onClick="@{()->vm.add_gege(0.5)}"
+            android:text="加 0.5"
             app:layout_constraintBottom_toTopOf="@id/main_btn_boy_minus05"
             app:layout_constraintEnd_toEndOf="@id/guideline_v1"
-            app:layout_constraintVertical_chainStyle="packed"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/main_btn_boy_minus01"/>
+            app:layout_constraintTop_toBottomOf="@id/main_btn_boy_minus01"
+            app:layout_constraintVertical_chainStyle="packed" />
 
         <Button
             android:id="@+id/main_btn_boy_minus05"
             style="@style/LvBtn_style"
-            android:text="减 0.5"
             android:onClick="@{()->vm.minus_gege(0.5)}"
+            android:text="减 0.5"
             app:layout_constraintBottom_toTopOf="@id/main_btn_boy_add1"
             app:layout_constraintEnd_toEndOf="@id/guideline_v1"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/main_btn_boy_add05"/>
+            app:layout_constraintTop_toBottomOf="@id/main_btn_boy_add05" />
 
         <Button
             android:id="@+id/main_btn_boy_add1"
             style="@style/LvBtn_style"
-            android:text="加 1"
             android:onClick="@{()->vm.add_gege(1)}"
+            android:text="加 1"
             app:layout_constraintBottom_toTopOf="@id/main_btn_boy_minus1"
             app:layout_constraintEnd_toEndOf="@id/guideline_v1"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/main_btn_boy_minus05"/>
+            app:layout_constraintTop_toBottomOf="@id/main_btn_boy_minus05" />
 
         <Button
             android:id="@+id/main_btn_boy_minus1"
             style="@style/LvBtn_style"
-            android:text="减 1"
             android:onClick="@{()->vm.minus_gege(1)}"
+            android:text="减 1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@id/guideline_v1"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/main_btn_boy_add1"/>
+            app:layout_constraintTop_toBottomOf="@id/main_btn_boy_add1" />
 
         <Button
             android:id="@+id/main_btn_girl_add01"
             style="@style/LvBtn_style"
-            android:text="加 0.1"
             android:onClick="@{()->vm.add_meimei(0.1)}"
+            android:text="加 0.1"
             app:layout_constraintBottom_toTopOf="@id/main_btn_girl_minus01"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintVertical_chainStyle="packed"
             app:layout_constraintStart_toStartOf="@id/guideline_v1"
-            app:layout_constraintTop_toTopOf="@id/guideline_h1"/>
+            app:layout_constraintTop_toTopOf="@id/guideline_h1"
+            app:layout_constraintVertical_chainStyle="packed" />
 
         <Button
             android:id="@+id/main_btn_girl_minus01"
             style="@style/LvBtn_style"
-            android:text="减 0.1"
             android:onClick="@{()->vm.minus_meimei(0.1)}"
+            android:text="减 0.1"
             app:layout_constraintBottom_toTopOf="@id/main_btn_girl_add05"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/guideline_v1"
-            app:layout_constraintTop_toBottomOf="@id/main_btn_girl_add01"/>
+            app:layout_constraintTop_toBottomOf="@id/main_btn_girl_add01" />
 
         <Button
             android:id="@+id/main_btn_girl_add05"
             style="@style/LvBtn_style"
-            android:text="加 0.5"
             android:onClick="@{()->vm.add_meimei(0.5)}"
+            android:text="加 0.5"
             app:layout_constraintBottom_toTopOf="@id/main_btn_girl_minus05"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintVertical_chainStyle="packed"
             app:layout_constraintStart_toStartOf="@id/guideline_v1"
-            app:layout_constraintTop_toBottomOf="@id/main_btn_girl_minus01"/>
+            app:layout_constraintTop_toBottomOf="@id/main_btn_girl_minus01"
+            app:layout_constraintVertical_chainStyle="packed" />
 
         <Button
             android:id="@+id/main_btn_girl_minus05"
             style="@style/LvBtn_style"
-            android:text="减 0.5"
             android:onClick="@{()->vm.minus_meimei(0.5)}"
+            android:text="减 0.5"
             app:layout_constraintBottom_toTopOf="@id/main_btn_girl_add1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/guideline_v1"
-            app:layout_constraintTop_toBottomOf="@id/main_btn_girl_add05"/>
+            app:layout_constraintTop_toBottomOf="@id/main_btn_girl_add05" />
 
         <Button
             android:id="@+id/main_btn_girl_add1"
             style="@style/LvBtn_style"
-            android:text="加 1"
             android:onClick="@{()->vm.add_meimei(1)}"
+            android:text="加 1"
             app:layout_constraintBottom_toTopOf="@id/main_btn_girl_minus1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/guideline_v1"
-            app:layout_constraintTop_toBottomOf="@id/main_btn_girl_minus05"/>
+            app:layout_constraintTop_toBottomOf="@id/main_btn_girl_minus05" />
 
         <Button
             android:id="@+id/main_btn_girl_minus1"
             style="@style/LvBtn_style"
-            android:text="减 1"
             android:onClick="@{()->vm.minus_meimei(1)}"
+            android:text="减 1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/guideline_v1"
