@@ -41,11 +41,12 @@ dependencies {
 
     implementation project(':SwiftKit:basick')
     implementation project(':SwiftKit:uicorek')
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation project(':SwiftKit:componentk')
 
     //hilt
     implementation 'com.google.dagger:hilt-android:2.46.1'
     kapt 'com.google.dagger:hilt-compiler:2.46.1'
+    kapt 'androidx.room:room-compiler:2.5.2'
 
     //test
     testImplementation 'junit:junit:4.13.2'

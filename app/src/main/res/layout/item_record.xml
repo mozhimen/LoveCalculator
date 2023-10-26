@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:id="@+id/item_record_txt" xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_040"
+    style="@style/LvTxt_Style"
+    android:paddingHorizontal="@dimen/margin_10"
+    android:gravity="start|center_vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:text="2023年10月26日13时18分,给哥哥加1分,总分为20分" />
