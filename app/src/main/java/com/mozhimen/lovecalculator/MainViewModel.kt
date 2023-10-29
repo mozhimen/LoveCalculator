@@ -34,28 +34,28 @@ class MainViewModel @Inject constructor(private val _cache: Cache) : BaseViewMod
 
     fun add_gege(other: Double) {
         val current = System.currentTimeMillis()
-        RecordDatabase.get().recordDao.addRecord(Record(number_gege,other,1,"哥哥",transTime(current),current))
         number_gege = number_gege.toBigDecimal().add(BigDecimal(other)).toDouble()
+        RecordDatabase.get().recordDao.addRecord(Record(number_gege,other,1,"哥哥",transTime(current),current))
     }
 
     fun minus_gege(other: Double) {
         val current = System.currentTimeMillis()
-        RecordDatabase.get().recordDao.addRecord(Record(number_gege,other,0,"哥哥",transTime(current),current))
         number_gege = number_gege.toBigDecimal().minus(BigDecimal(other)).toDouble()
+        RecordDatabase.get().recordDao.addRecord(Record(number_gege,other,0,"哥哥",transTime(current),current))
     }
 
     fun add_meimei(other: Double) {
         val current = System.currentTimeMillis()
-        RecordDatabase.get().recordDao.addRecord(Record(number_gege,other,1,"妹妹",transTime(current),current))
         number_meimei = number_meimei.toBigDecimal().add(BigDecimal(other)).toDouble()
+        RecordDatabase.get().recordDao.addRecord(Record(number_gege,other,1,"妹妹",transTime(current),current))
     }
 
     fun minus_meimei(other: Double) {
         val current = System.currentTimeMillis()
-        RecordDatabase.get().recordDao.addRecord(Record(number_gege,other,0,"妹妹",transTime(current),current))
         number_meimei = number_meimei.toBigDecimal().minus(BigDecimal(other)).toDouble()
+        RecordDatabase.get().recordDao.addRecord(Record(number_gege,other,0,"妹妹",transTime(current),current))
     }
 
     fun transTime(currentTime:Long):String =
-        currentTime.longDate2strDate("yyyy年MM月dd日HH时mm分")
+        currentTime.longDate2strDate("yyyy年MM月dd日EEEEHH:mm")
 }

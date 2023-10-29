@@ -8,6 +8,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.mozhimen.componentk.pagingk.bases.BasePagingKActivityVBVM
 import com.mozhimen.lovecalculator.databinding.ActivityRecordBinding
 import com.mozhimen.lovecalculator.db.Record
+import com.mozhimen.uicorek.recyclerk.manager.RecyclerKCatchLinearLayoutManager
 
 /**
  * @ClassName RecordActivity
@@ -38,7 +39,7 @@ class RecordActivity : BasePagingKActivityVBVM<Record, ActivityRecordBinding, Re
     }
 
     override fun getRecyclerViewLayoutManager(): RecyclerView.LayoutManager {
-        return LinearLayoutManager(this)
+        return RecyclerKCatchLinearLayoutManager(this)
     }
 
     override fun onLoadStart() {

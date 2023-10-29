@@ -3,7 +3,7 @@ package com.mozhimen.lovecalculator.db
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.mozhimen.basick.utilk.android.app.UtilKApplication
+import com.mozhimen.basick.utilk.android.app.UtilKApplicationReflect
 
 /**
  * @ClassName RecordDatabase
@@ -19,7 +19,7 @@ abstract class RecordDatabase : RoomDatabase() {
     companion object {
         @Volatile
         private var _db: RecordDatabase =
-            Room.databaseBuilder(UtilKApplication.instance.applicationContext, RecordDatabase::class.java, "lv_record_db").allowMainThreadQueries() .build()
+            Room.databaseBuilder(UtilKApplicationReflect.instance.applicationContext, RecordDatabase::class.java, "lv_record_db").allowMainThreadQueries() .build()
 
         @JvmStatic
         fun get(): RecordDatabase {
